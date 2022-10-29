@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#include <time.h>
+
+void fun()
+
+{
+
+  for (int i=0; i<2000000; i++)
+
+  {
+
+  }
+
+}
+
+int main()
+
+{
+
+  clock_t t;
+
+  t = clock();
+
+  fun();
+
+  t = clock() - t;
+
+  double x = ((double)t)/CLOCKS_PER_SEC;
+
+  printf(“%f \n”, x);
+
+  return 0;
+
+}
+// The C library function clock_t clock() returns the number of clock ticks that have elapsed since the program was started. To get the seconds used by CPU, you set number by CLOCKS_SEC. No program, the number of labels is average and after the call to the fun() function, allowing a variable to protect this value. With this, dividing by CLOCKS_PER_SEC (ticks per second), we will have the time elapsed in the execution of the fun() function. It is another way of measuring the execution time of functions, alternative to the difftime() function.
