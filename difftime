@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+                #include <time.h>
+
+                int main(void)
+
+                {
+
+                               time_t start,end;
+
+                               volatile long unsigned count;
+
+                               start = time(NULL);
+
+                               for(contador = 0; count < 500000000; counter++)
+
+                                               ; /* Não executa nada */
+
+                               end = time(NULL);
+
+                               printf("O loop for usa %f seconds.\n", difftime(end, start));
+
+                               return 0;
+
+                }
