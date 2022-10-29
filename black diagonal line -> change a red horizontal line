@@ -1,0 +1,81 @@
+#include <glut.h>
+
+#include <stdlib.h>
+
+ 
+
+void init(void);
+
+void display(void);
+
+void keyboard(unsigned char key, int x, int y);
+
+ 
+
+int main(int argc, char** argv){
+
+ glutInit(&argc, argv); //Inicializa o GLUT
+
+ glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+
+ glutInitWindowSize (256, 256); //Specifies the dimensions of the window
+ 
+ glutInitWindowPosition (100, 100); //Specifies where the window appears on the screen 
+
+ glutCreateWindow ("Desenhando uma linha"); //create the window
+
+ init();
+
+ 
+
+glutDisplayFunc(display); //Função que será redesenhada pelo GLUT
+
+ //glutKeyboardFunc(keyboard); //Funções de teclado
+
+ glutMainLoop(); //Mostra todas as janelas criadas
+
+ return 0;
+
+}
+
+ 
+
+//Definição de cada função
+
+ 
+
+void init(void){
+
+ glClearColor(1.0, 1.0, 1.0, 1.0);                 //Color background
+
+ glOrtho (0, 256, 0, 256, -1 ,1);                   //Orthogonal projection mode
+
+}
+
+ 
+
+void display(void){
+
+ glClear(GL_COLOR_BUFFER_BIT); //Limpa a janela
+
+ glColor3f (0.0, 0.0, 0.0);                               //Color of line 
+
+ glBegin(GL_LINES);
+
+ glVertex2i(40,200); glVertex2i(200,10);                //Line start and end coordinates
+
+ glEnd();
+
+ glFlush();
+
+}
+
+//Changes must be made in the void display() function.
+
+In the glColor3f() function, the first parameter corresponds to red, which must go from 0 to 1. So,
+
+glColor3f(1.0, 0.0, 0.0);
+
+In the glVertex2() function, the final coordinate can be changed to keep the y component unchanged from the initial coordinate, keeping the line horizontal. So,
+
+glVertex2i(40,200); glVertex2i(200,200);
