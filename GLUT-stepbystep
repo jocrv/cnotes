@@ -1,0 +1,17 @@
+Step 1
+Download the GLUT library from the link.
+
+step 2
+Extract the files to the C:/GLUT folder.
+
+step 3
+The four files can be used to compiler for compiler LIB and Include folders, but figure 1 can be used to compiler that folder when searching for library files and .h headers). This is done, in Dev C++, in Tools > Compiler Options, Directories tab (figure 2), clicking on the icon with the arrow, indicating the C:/GLUT folder and choosing to add, both in the Libraries tab and in the C tab Includes.
+
+step 4
+Copy the glut32.dll file to the folder C:\Windows\system, C:\Windows\system32, or even to the folder where the project will be created.
+
+step 5
+To test, create a project in Dev C++ with Console Application and C Project options. Add in Project > Project Options, in the Parameters tab, in the Linker column, the instructions lglut32,crescelglu32 and lopengl32 (figure 3)
+
+step 6
+In the main project file, add the following code (a window will appear with a black background and a white square and the title "Hello World" in the window)
