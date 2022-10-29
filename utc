@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+                #include <time.h>
+
+  #define BRA (-4)
+
+                int main ()
+
+  {
+
+    time_t Time;
+
+    struct tm *ptr_ts;
+
+    time ( &Time );
+
+    ptr_ts = gmtime ( &Time );
+
+    printf (“Hour at Brasilia: %2d:%02d\n”,
+
+      ptr_ts->tm_hour+BRA, ptr_ts->tm_min);
+
+                                return 0;
+
+   }
