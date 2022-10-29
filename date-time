@@ -1,0 +1,21 @@
+#include <stdio.h> 
+
+#include <time.h> 
+
+int main ()
+
+{
+
+ time_t data_e_hora;
+
+ struct tm *timeinfo;
+
+ time (&data_e_hora);
+
+ timeinfo = localtime (&data_e_hora);
+
+ printf (“Data e hora local: %s”, asctime(timeinfo));
+
+ return 0;
+
+}
